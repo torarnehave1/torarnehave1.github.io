@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Content with Dynamic Loading</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-    
-    <div class="menu-bar">
-      <a href="#" onclick="loadContent('Home')">Home</a>
-      <a href="#" onclick="loadContent('Marketing')">Marketing</a>
-      <a href="#" onclick="loadContent('Technology')">Technology</a>
-      <a href="#" onclick="loadContent('Products')">Products</a>
-      <a href="#" onclick="loadContent('Organization')">Organization</a>
-    </div>
-    
-    <div id="content" class="content">
-      <h2>Welcome</h2>
-      <p>Click on the menu items to display page content here.</p>
-    </div>
+
+<div class="container">
+  <div class="menu-bar">
+    <a href="#" onclick="loadContent('Home')">Home</a>
+    <a href="#" onclick="loadContent('Marketing')">Marketing</a>
+    <a href="#" onclick="loadContent('Technology')">Technology</a>
+    <a href="#" onclick="loadContent('Products')">Products</a>
+    <a href="#" onclick="loadContent('Organization')">Organization</a>
+  </div>
+
+  <div id="content" class="content">
+    <h2>Welcome</h2>
+    <p>Click on the menu to display the content.</p>
+  </div>
 </div>
-    <script>
-    function loadContent(page) {
-      const contentDiv = document.getElementById('content');
-      contentDiv.innerHTML = `<h2>${page}</h2><p>This is the ${page} page content.</p>`;
-    }
-    </script>
-    
-    </body>
-    </html>
+
+<script>
+function loadContent(pageName) {
+  var contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = '<h2>' + pageName + '</h2><p>This is the ' + pageName + ' content.</p>';
+}
+</script>
+
+</body>
+</html>
