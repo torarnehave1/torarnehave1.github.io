@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="menu-bar">
+      <a href="#" onclick="loadContent('Home')">Home</a>
+      <a href="#" onclick="loadContent('Marketing')">Marketing</a>
+      <a href="#" onclick="loadContent('Technology')">Technology</a>
+      <a href="#" onclick="loadContent('Products')">Products</a>
+      <a href="#" onclick="loadContent('Organization')">Organization</a>
+    </div>
     
-    <h1>Hello 3</h1>
-    <p>This is a basic HTML file with an external CSS link.</p>
-
-    <p>This text is not blue.<span class="blue-text">I am blue.</span></p>
-`
-<p>Dette er en test</p>
-<p>Dette er en ny linje</p>
-</body>
-</html>
+    <div id="content" class="content">
+      <h2>Welcome</h2>
+      <p>Click on the menu items to display page content here.</p>
+    </div>
+    
+    <script>
+    function loadContent(page) {
+      const contentDiv = document.getElementById('content');
+      contentDiv.innerHTML = `<h2>${page}</h2><p>This is the ${page} page content.</p>`;
+    }
+    </script>
+    
+    </body>
+    </html>
