@@ -8,6 +8,10 @@ body {
 
 }
 
+.blue-text {
+  color: blue;
+}
+
 p {
   margin: 1em 0;
 }
