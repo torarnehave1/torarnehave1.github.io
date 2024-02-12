@@ -3,26 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centered Content with Dynamic Loading</title>
+<title>Responsive Site with Bootstrap</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSLNuopbYrUi1KyxmVjNvZDCwoH57jW4yeciD9" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-  <div class="menu-bar">
-    <a href="#" onclick="loadContent('Home')">Home</a>
-    <a href="#" onclick="loadContent('Marketing')">Marketing</a>
-    <a href="#" onclick="loadContent('Technology')">Technology</a>
-    <a href="#" onclick="loadContent('Products')">Products</a>
-    <a href="#" onclick="loadContent('Organization')">Organization</a>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" onclick="loadContent('Home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadContent('Marketing')">Marketing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadContent('Technology')">Technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadContent('Products')">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadContent('Organization')">Organization</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
-
-  <div id="content" class="content">
-    <h2>Welcome</h2>
-    <p>Click on the menu to display the content.</p>
+  
+  <div class="row mt-4">
+    <div class="col" id="content">
+      <h2>Welcome</h2>
+      <p>Click on the menu to display the content.</p>
+    </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB3C4EGJhkkOo+RD2FkzQXtb8jStRpPQqdu3g6eD4AhsCwRz" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM" crossorigin="anonymous"></script>
 <script>
 function loadContent(pageName) {
   var contentDiv = document.getElementById('content');
