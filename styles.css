@@ -11,7 +11,7 @@ body, html {
 /* Basic styles for the menu bar */
 .menu-bar {
   display: flex;
-  background-color: #333;
+  background-color: #7a64a7;
   overflow: hidden;
   width: 100%; /* Full width */
   justify-content: center; /* Center menu items horizontally */
