@@ -1,4 +1,4 @@
-/* Center the entire page content *//* Center the entire page content */
+/* Center the entire page content */
 body, html {
   height: 100%;
   margin: 0;
@@ -9,9 +9,9 @@ body, html {
 }
 
 /* Basic styles for the menu bar */
-.navbar-nav{
+.navbar-nav {
   display: flex;
-  background-color: #7a64a7;
+  background-color: red; /* Background color changed to red */
   overflow: hidden;
   width: 100%; /* Full width */
   justify-content: center; /* Center menu items horizontally */
@@ -34,4 +34,3 @@ body, html {
   padding: 20px;
   text-align: center; /* Center content text */
 }
-          <ul class="navbar-nav"> 
